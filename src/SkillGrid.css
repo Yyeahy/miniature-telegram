@@ -1,0 +1,49 @@
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.skill-grid {
+  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  max-width: 440px;
+  margin: 1rem auto;
+}
+
+.skill-block {
+  font-size: 1.2rem;
+  background-color: #B2F461;
+  color: #960796;
+  font-weight: bold;
+  padding: 0.5rem 0.6rem;
+  border-radius: 10px;
+  height: 110px;
+  overflow: hidden;
+  word-break: break-word;
+  width: 110px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transform: rotate(-1.5deg);
+  transition: transform 0.3s ease;
+  font-family: 'Patrick Hand', cursive;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  user-select: none;
+  align-items: center;
+  cursor: default;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.skill-block:hover {
+  transform: rotate(0deg) scale(1.05);
+  background-color: #B2F461;
+}
+

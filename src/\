@@ -1,0 +1,13 @@
+//////////////////import logo from "./logo.svg";
+import "./App.css";
+
+function App() {
+  return (
+    <div style={{ height: "100vh", backgroundColor: "#000000" }}>
+      <h1 className="glow-title"> PROFILE MATHING UI</h1>
+      <button className="enter-button">ENTER</button>
+    </div>
+  );
+}
+
+export default App;

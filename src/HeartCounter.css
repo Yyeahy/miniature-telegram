@@ -1,0 +1,44 @@
+.heart-counter {
+  cursor: pointer;
+  font-size: 2.5rem;
+  user-select: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.heart {
+  font-size: 2rem;
+  margin: 0 5px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 4px;
+  border: none;
+}
+
+.heart-counter:active .heart{
+  transform: scale(1.3);
+}
+
+.heart.full {
+  color: red;
+  animation: pop 0.4s ease;
+}
+
+.heart.empty {
+  color: #999;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
