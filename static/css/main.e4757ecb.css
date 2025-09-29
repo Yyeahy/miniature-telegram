@@ -1,0 +1,425 @@
+html, body, #root{
+  height: 100%;
+  background: linear-gradient(to bottom, #1e1e1e, #121212);
+  font-family: 'Patrick Hand', sans-serif;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  /*background-image: url('/your-background.jpg');*/
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-color: black !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glow-title {
+  color : #18CD21;
+  font-size: 4.2rem;
+  font-family: 'Kode Mono', monospace;
+  text-align: center;
+  text-shadow:
+    0 0 5px #F24EB6, 
+    0 0 10px #F24EB6, 
+    0 0 20px #F24EB6, 
+    0 0 40px #F24EB6;
+}
+
+.enter-button {
+  color: #CD18AF;
+  background-color : transparent;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-family: 'Press Start 2P', cursive;
+  cursor: grab;
+  letter-spacing: 2px;
+  border-radius: 6px;
+  text-shadow: 0 0 10px #CD18AF;
+  box-shadow: 0 0 20px #CD18AF;
+  transform: scale(1.05);
+}
+
+.enter-button:hover {
+  box-shadow: 10px 5px 5px yellow;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+
+.fridge-container{
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fridge-box{
+  width: 60vw;
+  min-height: 60vh;
+  height: auto;
+  background-color: #111;
+  border: 8px solid #333;
+  box-shadow:
+    inset 0 0 30px rgba(255, 255, 255, 0.1),
+    0 0 60px rgba(255, 0, 255, 0.3);
+  border-radius: 20px;
+  padding: 4rem;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  filter: blur(10px) brightness(0.5);
+}
+.fridge-box.animate{
+  animation: fadeIn 3s ease-out forwards;
+}
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: scale(0.95);
+    filter: blur(10px) brightness(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0) brightness(1);
+  }
+}
+.contact-section {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 999;
+  opacity: 0.8;
+  bottom : 2rem;
+  text-align: right;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: opacity 0.3s;
+}
+
+.contact-section a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.contact-section a: hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+
+
+.fridge-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.fridge-box {
+  width: 60vw;
+  height: 60vh;
+  background-color: black;
+  box-shadow: none;
+  background: none;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  border: none;
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+}
+.fridge-inside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-image: none !important;
+  background: transparent !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+    filter: blur(10px) brightness(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0) brightness(1);
+  }
+}
+
+.animate {
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+.fridge-inside ul{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.fridge-inside li{
+/*  background: red;*/
+  border: 1px solid #666;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  animation: slideInUp 0.6s ease-in-out forwards;
+  opacity: 0;
+  transform: translateY(10px);
+  background-image: none !important;
+  background-color: black !important;
+}
+
+.fridge-inside.show li{
+  animation: slideInUp 0.6s ease-in-out forwards;
+}
+.fridge-inside.show li:nth-child(1){
+  animation-delay: 0.6s;
+}
+.fridge-inside.show li:nth-child(2){
+  animation-delay: 0.9s;
+}
+.fridge-inside.show li:nth-child(3){
+  animation-delay: 1.2s;
+}
+
+@keyframes slideInUp {
+  from{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fridge-grid-horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: transparent;
+}
+
+.bio-card-wild {
+  margin-top: -3rem;
+  max-width: 550px;
+  text-align: center;
+  padding: 1.5rem;
+  font-size:0.8rem;
+  background-color: #333;
+  color: white;
+  font-family: 'Courior New', monospace;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.skill-row {
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.skill-grid {
+  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  max-width: 440px;
+  margin: 1rem auto;
+}
+
+.skill-block {
+  font-size: 1.2rem;
+  background-color: #B2F461;
+  color: #960796;
+  font-weight: bold;
+  padding: 0.5rem 0.6rem;
+  border-radius: 10px;
+  height: 110px;
+  overflow: hidden;
+  word-break: break-word;
+  width: 110px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transform: rotate(-1.5deg);
+  transition: transform 0.3s ease;
+  font-family: 'Patrick Hand', cursive;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  -webkit-user-select: none;
+          user-select: none;
+  align-items: center;
+  cursor: default;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.skill-block:hover {
+  transform: rotate(0deg) scale(1.05);
+  background-color: #B2F461;
+}
+
+
+.heart-counter {
+  cursor: pointer;
+  font-size: 2.5rem;
+  -webkit-user-select: none;
+          user-select: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.heart {
+  font-size: 2rem;
+  margin: 0 5px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 4px;
+  border: none;
+}
+/*.heart-counter:active .heart {
+  transform: scale(1.3);
+}
+ */
+.heart.full {
+  color: red;
+  animation: pop 0.4s ease;
+}
+
+.heart.empty {
+  color: #999;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fridge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  height: 400px;
+}
+
+.fridge-door-wrapper {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  margin: 0 auto;
+  perspective: 800px;
+}
+
+.fridge-door {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2b2b2b;
+  border: 6px solid #999;
+  box-shadow: 
+    inset -4px -4px 0 #666, 
+    inset 4px 4px 0 #ccc,
+    0 0 0 3px #000;
+  transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transform-origin: left center;
+  position: absolute;
+  transform: rotateY(0deg);
+  
+}
+
+.fridge-door.open {
+  transform: rotateY(-120deg);
+}
+
+/*.fridge-door.closed{
+  transform: rotateY(0deg);
+}*/
+
+.fridge-door.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.handle {
+  width: 12px;
+  height: 50px;
+  background-color: #666;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid #444;
+  box-shadow: inset -2px -2px 0 #222, inset 2px 2px 0 #888;
+}
+
+.fridge-inside {
+  background-image: liner-gradient(to right, #333 1px, transparent 1px),
+                    liner-gradient(to bottom, #333 1px, transparent 1px);
+  background-size: 10px 10px;
+  background-color: #1a1a1a;
+}
+

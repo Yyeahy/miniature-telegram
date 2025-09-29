@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/miniature-telegram/static/css/main.e4757ecb.css",
+    "main.js": "/miniature-telegram/static/js/main.3cc4fec7.js",
+    "static/js/206.a394edfd.chunk.js": "/miniature-telegram/static/js/206.a394edfd.chunk.js",
+    "index.html": "/miniature-telegram/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.e4757ecb.css",
+    "static/js/main.3cc4fec7.js"
+  ]
+}
