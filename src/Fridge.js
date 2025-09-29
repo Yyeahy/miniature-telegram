@@ -4,11 +4,6 @@ import FridgeBio from "./FridgeBio";
 import SkillGrid from "./SkillGrid";
 
 function Fridge({ animate }) {
-  // const skill = ["Programming", "Art", "Cyber Tarot"];
-  // const listSkill = skill.map((ability, i) => <li key={i}>{ability}</li>);
-  //console.log("animate:", animate);
-  //console.log("skill:", skill);
-
   return (
     <div className="fridge-container">
       {animate && (
